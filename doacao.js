@@ -155,18 +155,11 @@ app.use(express.static(__dirname + '/public'));
 	app.get('/', function(req, res) {
         res.sendFile('/public/index.html'); // load our public/index.html file
     });
-
+	/*
     app.get('/admin/trips', function(req, res) {
         res.sendFile(__dirname + '/public/views/tripsView.html');
     });
-
-    app.get('/admin/users', function(req, res) {
-        res.sendFile(__dirname + '/public/views/usersView.html');
-    });
-
-    app.get('/admin/vehicles', function(req, res) {
-        res.sendFile(__dirname + '/public/views/vehiclesView.html');
-    });
-
+	*/
+    
 	return app;
 }
