@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="doacao">
 
 <head>
 
@@ -155,11 +155,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/pp.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/asp.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Pequeno Príncipe</h4>
-                        <p class="text-muted">O maior hospital exclusivamente pediátrico do Brasil. Está em operação há quase 100 anos.</p>
+                        <h4>ASP</h4>
+                        <p class="text-muted">A Ação Social do Paraná é uma organização sem fins lucrativos, entidade membro da Cáritas.</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -331,9 +331,9 @@
                         <h4>Nathália Pimentel</h4>
                         <p class="text-muted">Engenheira de Energia</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="https://www.facebook.com/dggfreitas"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/natidiaspimentel"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://br.linkedin.com/in/nathália-dias-pimentel-a7943a131/en"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -444,18 +444,13 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                                <ul class="list-inline">
-                                    <li>Date: July 2014</li>
-                                    <li>Client: Round Icons</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>APAE</h2>
+                                <p class="item-intro text-muted">Associação de Pais e Amigos dos Excepcionais.</p>
+                                <img class="img-responsive img-centered" src="img/inst/apae.jpg" alt="">
+                                <p><strong>Endereço:</strong> {{street}}, {{number}}, CEP {{zipcode}}</p>
+                                <p><strong>Alvará:</strong> {{license}}</p>
+                                <p>A Associação de Pais e Amigos dos Excepcionais – APAE/Curitiba é uma entidade filantrópica sem fins lucrativos de direito privado, responsável pelo atendimento de Pessoas com Deficiência Intelectual, desde 0 ano até o fim da vida. Iniciada em 06/10/1961 e fundada em 06/10/1962, tendo como sede uma sala da Associação de Professores do Paraná, defendeu a premissa de defesa dos direitos dos Portadores de Deficiência, bem como o atendimento e apoio para a clientela à qual destina suas atividades.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
                             </div>
                         </div>
                     </div>
@@ -477,13 +472,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <h2>Project Heading</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                                <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <div class="modal-body" ng-controller="ngoController">
+                                <h2>ASP</h2>
+                                <p class="item-intro text-muted">Ação Social do Paraná.</p>
+                                <img class="img-responsive img-centered" src="img/inst/asp.jpg" alt="">
+                                <p><strong>Endereço:</strong> {{street}}, {{number}}, CEP {{zipcode}}</p>
+                                <p><strong>Alvará:</strong> {{license}}</p>
+                                <p>A Ação Social do Paraná (ASP), fundada em 13 de dezembro de 1944, é uma organização sem fins lucrativos, entidade membro da Cáritas e atuante nas áreas da Assistência Social, Educação e Segurança Alimentar e Nutricional. A ASP sempre foi protagonista de movimentos de transformação social, mobilizando a sociedade para o alcance de uma vida mais digna para todos. Ela prosseguiu com suas atividades, mobilizando, capacitando e apoiando os diferentes atores do trabalho social. Destacam-se em sua história o compromisso com o profissionalismo, a participação popular e a implementação de ações concretas para a transformação social. Atualmente a ASP é coordenada pelo Pe. José Aparecido Pinto e toma como base para a sua atuação as diretrizes das Políticas Públicas. É vinculada ao Sistema Único de Assistência Social (SUAS) e compõe a rede de defesa, desenvolvimento e execução das políticas de Assistência Social, Educação e Segurança Alimentar e Nutricional.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
                             </div>
                         </div>
                     </div>
@@ -507,12 +503,13 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>Pequeno Cotolengo</h2>
+                                <p class="item-intro text-muted">Qualidade de vida para pessoas com deficiências múltiplas.</p>
+                                <img class="img-responsive img-centered" src="img/inst/cotolengo.jpg" alt="">
+                                <p><strong>Endereço:</strong> {{street}}, {{number}}, CEP {{zipcode}}</p>
+                                <p><strong>Alvará:</strong> {{license}}</p>
+                                <p>O Pequeno Cotolengo é referência no Paraná em acolhimento, saúde, educação e qualidade de vida para pessoas com deficiências múltiplas, abandonadas pelas famílias ou em situação de risco. Atuamos há 50 anos e hoje acolhemos mais de 200 pessoas, além de oferecer mais de 62 mil atendimentos anuais oferecidos em 13 especialidades da saúde. O acesso a Acolhimento, conduzido pelo Serviço Social, tem o objetivo de garantir a integridade e a qualidade de vida dos moradores da instituição. As ações na área da saúde são desenvolvidas através de nosso Centro de Reabilitação e através da Unidade Odontológica. Por fim, as atividades de educação são realizadas em nossa Escola Pequeno Cotolengo – Educação Infantil, Ensino Fundamental na Modalidade Educação Especial. Para a oferta destes acessos a instituição conta com 15 mil m² de área útil e de 120 mil m² de área total.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
                             </div>
                         </div>
                     </div>
@@ -529,6 +526,10 @@
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
