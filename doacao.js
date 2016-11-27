@@ -155,11 +155,18 @@ app.use(express.static(__dirname + '/public'));
 	app.get('/', function(req, res) {
         res.sendFile('/public/index.html'); // load our public/index.html file
     });
-	/*
-    app.get('/admin/trips', function(req, res) {
-        res.sendFile(__dirname + '/public/views/tripsView.html');
+	
+	app.get('/cadastroDoador', function(req, res) {
+        res.sendFile(__dirname + '/public/views/cadastroDoador.html');
     });
-	*/
-    
+	
+	app.get('/cadastroOng', function(req, res) {
+        res.sendFile(__dirname + '/public/views/cadastroOng.html');
+    });
+	
+	app.get('/obrigado', function(req, res) {
+        res.sendFile(__dirname + '/public/views/obrigado.html');
+    });
+	
 	return app;
 }
